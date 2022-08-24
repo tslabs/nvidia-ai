@@ -146,12 +146,9 @@ int gst_my()
 
   // Set Element properties
   printf("Setting Element properties\n");
-  // g_object_set(source, "location", "/dli/task/deepstream/samples/streams/sample_720p.h264", NULL);
-  g_object_set(source, "location", "/dli/task/deepstream/berlin.h264", NULL);
-  // g_object_set(source, "num-buffers", 1, NULL);
+  g_object_set(source, "location", "video.h264", NULL);
   g_object_set(streammux, "width", 1920, "height", 1080, "batch-size", 1, "batched-push-timeout", 4000000, NULL);
   g_object_set(pgie, "config-file-path", "pgie_config.txt", NULL);
-  // g_object_set(pgie, "output-instance-mask", 1, NULL);
 
   // Add Elements to Pipeline
   printf("Adding Elements to Pipeline\n");
